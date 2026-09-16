@@ -1,0 +1,115 @@
+import React, { useRef } from 'react';
+import { ArrowRight, Sparkles } from 'lucide-react';
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+
+export const BrandStorySection: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current) return;
+
+    gsap.fromTo(
+      containerRef.current.children,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.25,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 70%',
+        },
+      }
+    );
+  }, { scope: sectionRef });
+
+  return (
+    <section id="sobre" ref={sectionRef} className="py-24 bg-[#E8E0D3] text-[#1c241b] border-b border-[#1c241b]/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Narrative Block (5 Columns) */}
+          <div className="lg:col-span-5 space-y-6">
+            {/* Monogram Crest Emblem with #9EA88B border and UI-Motion Gentle Float */}
+            <div className="relative w-20 h-20 rounded-full border-2 border-[#9EA88B] flex items-center justify-center bg-[#f7f4ed] shadow-md animate-float-gentle">
+              <span className="font-serif text-3xl text-[#1c241b] font-light italic">V</span>
+              <div className="absolute inset-1 rounded-full border border-dashed border-[#9EA88B]/60" />
+            </div>
+
+            <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#9EA88B] font-bold flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#9EA88B]" />
+              Sobre a Virtuose
+            </span>
+
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#1c241b] leading-[1.15]">
+              Mais que uma boutique, <span className="italic block font-normal text-[#1c241b]/90">um estilo de vida.</span>
+            </h2>
+
+            <p className="font-sans text-sm sm:text-base text-[#1c241b]/85 font-light leading-relaxed">
+              A Virtuose nasceu do desejo profundo de transformar o cotidiano em arte. Selecionamos minuciosamente cada detalhe para que você viva experiências únicas, com beleza, significado e alma.
+            </p>
+
+            <div className="pt-2">
+              <a
+                href="#manifesto"
+                className="inline-flex items-center gap-3 font-sans text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-semibold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group"
+              >
+                <span>CONHEÇA NOSSA HISTÓRIA</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5 text-[#9EA88B]" />
+              </a>
+            </div>
+          </div>
+
+          {/* Middle Imagery Block (4 Columns) */}
+          <div className="lg:col-span-4 relative group">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-[#9EA88B]/30 shadow-2xl">
+              <img
+                src="/images/brand-story.webp"
+                alt="Arranjo floral sob cúpula de vidro na Virtuose Boutique Sensorial"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
+          </div>
+
+          {/* Right Linen Highlight Card (3 Columns) in Soft-Pastel */}
+          <div className="lg:col-span-3">
+            <div className="bg-[#f7f4ed] text-[#1c241b] p-8 rounded-sm shadow-xl space-y-4 border border-[#9EA88B]/25 relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+              <div className="absolute top-0 right-0 transform translate-x-4 -translate-y-4 text-[#9EA88B]/20 select-none pointer-events-none">
+                <span className="font-serif text-8xl font-light italic">V</span>
+              </div>
+
+              <span className="font-sans text-[10px] tracking-[0.3em] uppercase font-bold text-[#9EA88B] block">
+                EDIÇÕES LIMITADAS
+              </span>
+
+              <h3 className="font-serif text-2xl font-light leading-snug text-[#1c241b]">
+                Produção sensorial em pequena escala.
+              </h3>
+
+              <p className="font-sans text-xs font-normal text-[#4f584a] leading-relaxed">
+                Nossas criações são elaboradas em quantidades restritas para preservar a exclusividade, o cuidado manual e a integridade botânica de cada ingrediente.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href="#mosaic"
+                  className="inline-flex items-center gap-2 font-sans text-[10px] tracking-[0.22em] hover:tracking-[0.26em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] border-b border-[#9EA88B]/40 pb-1 group-hover:border-[#9EA88B] transition-all duration-300"
+                >
+                  <span>CONHECER EXPERIÊNCIAS</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5 text-[#9EA88B]" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
