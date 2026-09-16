@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://virtuoseboutique.com.br/sitemap.xml

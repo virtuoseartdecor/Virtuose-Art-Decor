@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist is included so Hostinger Git deployment has production files ready
 dist-ssr
 *.local
 
