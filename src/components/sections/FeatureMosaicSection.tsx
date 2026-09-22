@@ -9,16 +9,16 @@ export const FeatureMosaicSection: React.FC = () => {
 
   const pillars = [
     {
-      id: 'toque',
-      title: 'Sinta o toque dos detalhes',
-      description: 'Materiais naturais, acabamentos que acolhem, texturas que encantam.',
+      id: 'flores',
+      title: 'Flores',
+      description: 'A vida floresce nos detalhes.',
       cta: 'SAIBA MAIS',
       image: '/images/jardim-secreto.webp',
     },
     {
       id: 'aromas',
-      title: 'Aromas que despertam lembranças',
-      description: 'Cada fragrância conta uma história única elaborada em pequenos lotes artesanais.',
+      title: 'Aroma e bem-estar',
+      description: 'Aroma que acolhe, memória que fica.',
       cta: 'CONHECER AROMAS',
       image: '/images/luz-da-alma.webp',
     },
@@ -31,8 +31,8 @@ export const FeatureMosaicSection: React.FC = () => {
     },
     {
       id: 'presentes',
-      title: 'Presentes que contam histórias',
-      description: 'Mais que uma peça, um gesto profundo de afeto, carinho e elegância.',
+      title: 'Presentes',
+      description: 'Presentes que contam histórias.',
       cta: 'VER CURADORIA',
       image: '/images/presentes.webp',
     },

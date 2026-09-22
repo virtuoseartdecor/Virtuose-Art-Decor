@@ -60,8 +60,8 @@ export const AudioPlayer: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         onClick={toggleAudio}
-        aria-label={isPlaying ? 'Pausar som ambiente' : 'Ativar som ambiente da boutique'}
-        title={isPlaying ? 'Desativar Atmosfera Sensorial' : 'Ativar Atmosfera Sensorial'}
+        aria-label={isPlaying ? 'Pausar atmosfera sensorial' : 'Sinta a Vírtuose'}
+        title={isPlaying ? 'Pausar Atmosfera' : 'Sinta a Vírtuose'}
         className="group relative flex items-center gap-3 bg-[#E8E0D3]/95 backdrop-blur-xl border border-[#9EA88B]/40 text-[#1c241b] px-4.5 py-3 rounded-full shadow-[0_15px_35px_rgba(28,36,27,0.12)] transition-all duration-500 hover:scale-105 hover:bg-[#E8E0D3] hover:border-[#9EA88B] cursor-pointer"
       >
         <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#9EA88B]/20 text-[#1c241b] transition-transform duration-300 group-hover:scale-110">
@@ -73,7 +73,7 @@ export const AudioPlayer: React.FC = () => {
         </span>
 
         <span className="font-sans text-xs tracking-[0.2em] uppercase font-semibold hidden sm:inline-block text-[#1c241b]">
-          {isPlaying ? 'Atmosfera Ativa' : 'Som Ambiente'}
+          {isPlaying ? 'Sinta a Vírtuose' : 'Sinta a Vírtuose'}
         </span>
 
         {isPlaying && (

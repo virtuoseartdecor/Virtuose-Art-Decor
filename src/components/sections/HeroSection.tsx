@@ -99,11 +99,8 @@ export const HeroSection: React.FC = () => {
             Boutique Sensorial & Ateliê
           </p>
 
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.15] font-light tracking-wide drop-shadow-md">
-            A beleza não precisa chamar atenção.{' '}
-            <span className="italic block font-normal text-[#f7f4ed]/95 mt-1">
-              Ela apenas permanece.
-            </span>
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.15] font-light tracking-wide drop-shadow-md">
+            Beleza que toca a alma
           </h1>
 
           <p className="font-sans text-sm sm:text-base text-[#f7f4ed]/85 font-light leading-relaxed max-w-md">

@@ -30,10 +30,10 @@ export const BrandStorySection: React.FC = () => {
   return (
     <section id="sobre" ref={sectionRef} className="py-24 bg-[#E8E0D3] text-[#1c241b] border-b border-[#1c241b]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           
-          {/* Left Narrative Block (5 Columns) */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Left Narrative Block (7 Columns) */}
+          <div className="lg:col-span-7 space-y-6">
             {/* Monogram Crest Emblem with #9EA88B border and UI-Motion Gentle Float */}
             <div className="relative w-20 h-20 rounded-full border-2 border-[#9EA88B] flex items-center justify-center bg-[#f7f4ed] shadow-md animate-float-gentle">
               <span className="font-serif text-3xl text-[#1c241b] font-light italic">V</span>
@@ -64,22 +64,9 @@ export const BrandStorySection: React.FC = () => {
             </div>
           </div>
 
-          {/* Middle Imagery Block (4 Columns) */}
-          <div className="lg:col-span-4 relative group">
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-[#9EA88B]/30 shadow-2xl">
-              <img
-                src="/images/brand-story.webp"
-                alt="Arranjo floral sob cúpula de vidro na Virtuose Boutique Sensorial"
-                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            </div>
-          </div>
-
-          {/* Right Linen Highlight Card (3 Columns) in Soft-Pastel */}
-          <div className="lg:col-span-3">
-            <div className="bg-[#f7f4ed] text-[#1c241b] p-8 rounded-sm shadow-xl space-y-4 border border-[#9EA88B]/25 relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+          {/* Right Linen Highlight Card (5 Columns) in Soft-Pastel */}
+          <div className="lg:col-span-5">
+            <div className="bg-[#f7f4ed] text-[#1c241b] p-8 sm:p-10 rounded-sm shadow-xl space-y-5 border border-[#9EA88B]/25 relative overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <div className="absolute top-0 right-0 transform translate-x-4 -translate-y-4 text-[#9EA88B]/20 select-none pointer-events-none">
                 <span className="font-serif text-8xl font-light italic">V</span>
               </div>
@@ -88,11 +75,11 @@ export const BrandStorySection: React.FC = () => {
                 EDIÇÕES LIMITADAS
               </span>
 
-              <h3 className="font-serif text-2xl font-light leading-snug text-[#1c241b]">
+              <h3 className="font-serif text-2xl sm:text-3xl font-light leading-snug text-[#1c241b]">
                 Produção sensorial em pequena escala.
               </h3>
 
-              <p className="font-sans text-xs font-normal text-[#4f584a] leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm font-normal text-[#4f584a] leading-relaxed">
                 Nossas criações são elaboradas em quantidades restritas para preservar a exclusividade, o cuidado manual e a integridade botânica de cada ingrediente.
               </p>
 
