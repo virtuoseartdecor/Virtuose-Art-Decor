@@ -15,15 +15,15 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinksLeft = [
-    { label: 'BOUTIQUE', href: '#sobre' },
-    { label: 'EXPERIÊNCIAS', href: '#mosaic' },
-    { label: 'AROMAS & RITUAIS', href: '#mosaic' },
+    { label: 'INÍCIO', href: '/' },
+    { label: 'COLEÇÕES', href: '/colecoes' },
+    { label: 'EXPERIÊNCIAS', href: '/#mosaic' },
   ];
 
   const navLinksRight = [
-    { label: 'SOBRE A MARCA', href: '#sobre' },
-    { label: 'VALORES', href: '#valores' },
-    { label: 'MANIFESTO', href: '#manifesto' },
+    { label: 'SOBRE A VIRTUOSE', href: '/#sobre' },
+    { label: 'VALORES', href: '/#valores' },
+    { label: 'FALE CONOSCO', href: '/#contato' },
   ];
 
   return (
