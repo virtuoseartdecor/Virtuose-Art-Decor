@@ -60,7 +60,7 @@ export const FeatureMosaicSection: React.FC = () => {
 
   return (
     <section id="mosaic" ref={sectionRef} className="py-24 bg-[#f7f4ed] text-[#1c241b] border-b border-[#9ea88b]/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#9EA88B] font-bold block">
@@ -75,7 +75,41 @@ export const FeatureMosaicSection: React.FC = () => {
           </p>
         </div>
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {/* Introductory Coleções Card (Left Space) */}
+          <div className="relative min-h-[400px] rounded-sm p-8 flex flex-col justify-between border border-[#9EA88B]/40 bg-[#E8E0D3] shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 group overflow-hidden">
+            {/* Ambient Watermark Monogram */}
+            <div className="absolute top-2 right-2 text-[#9EA88B]/15 select-none pointer-events-none transition-transform duration-700 group-hover:scale-110">
+              <span className="font-serif text-8xl font-light italic">V</span>
+            </div>
+
+            <div className="relative z-10 space-y-4">
+              <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#9EA88B] font-bold block">
+                CURADORIA AUTORAL
+              </span>
+              <h3 className="font-serif text-3xl sm:text-4xl font-light text-[#1c241b] tracking-tight leading-tight">
+                Coleções
+              </h3>
+              <div className="w-10 h-[1.5px] bg-[#9EA88B]/70" />
+              <p className="font-sans text-xs sm:text-sm text-[#4f584a] font-light leading-relaxed">
+                Cada coleção foi criada para despertar sentimentos únicos.
+              </p>
+            </div>
+
+            <div className="relative z-10 pt-6 border-t border-[#9EA88B]/35">
+              <a
+                href="/colecoes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 text-xs font-sans tracking-[0.2em] hover:tracking-[0.24em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/btn"
+              >
+                <span>Ver todas as coleções</span>
+                <ArrowRight className="w-4 h-4 text-[#9EA88B] transition-transform duration-300 group-hover/btn:translate-x-1.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Themed Sensory Cards */}
           {pillars.map((pillar) => (
             <div
               key={pillar.id}

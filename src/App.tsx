@@ -7,10 +7,18 @@ import { BrandStorySection } from './components/sections/BrandStorySection';
 import { ValuePropsBar } from './components/sections/ValuePropsBar';
 import { FooterNewsletter } from './components/sections/FooterNewsletter';
 import { AudioPlayer } from './components/common/AudioPlayer';
+import { ColecoesPage } from './components/pages/ColecoesPage';
 
 export function App() {
   // Initialize Lenis smooth scroll synchronized with GSAP ScrollTrigger
   useLenis();
+
+  const isColecoesPage = typeof window !== 'undefined' && 
+    (window.location.pathname.includes('/colecoes') || window.location.hash === '#todas-colecoes');
+
+  if (isColecoesPage) {
+    return <ColecoesPage />;
+  }
 
   return (
     <div className="min-h-screen bg-[#f7f4ed] text-[#1c241b] flex flex-col font-sans selection:bg-[#9ea88b]/40 selection:text-[#1c241b]">
