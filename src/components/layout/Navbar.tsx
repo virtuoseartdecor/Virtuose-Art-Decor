@@ -14,15 +14,12 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinksLeft = [
-    { label: 'INÍCIO', href: '/' },
+  const navLinks = [
+    { label: 'HOME', href: '/#inicio' },
+    { label: 'SOBRE', href: '/#sobre' },
+    { label: 'EXPERIÊNCIAS', href: '/#experiencias' },
     { label: 'COLEÇÕES', href: '/colecoes' },
-    { label: 'EXPERIÊNCIAS', href: '/#mosaic' },
-  ];
-
-  const navLinksRight = [
-    { label: 'SOBRE A VÍRTUOSE', href: '/#sobre' },
-    { label: 'VALORES', href: '/#valores' },
+    { label: 'DIFERENCIAIS', href: '/#diferenciais' },
     { label: 'FALE CONOSCO', href: '/#contato' },
   ];
 
@@ -61,7 +58,7 @@ export const Navbar: React.FC = () => {
 
           {/* Bottom Row: 100% Centered Navigation Menu Links with UI-Motion */}
           <nav className="hidden lg:flex items-center justify-center gap-8 pt-2 border-t border-[#1c241b]/10 w-full text-[11px] font-sans tracking-[0.24em] uppercase text-[#1c241b]/90 font-medium">
-            {[...navLinksLeft, ...navLinksRight].map((link, idx) => (
+            {navLinks.map((link, idx) => (
               <React.Fragment key={link.label}>
                 <a
                   href={link.href}
@@ -70,7 +67,7 @@ export const Navbar: React.FC = () => {
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-[#9EA88B] transition-all duration-300 group-hover:w-full" />
                 </a>
-                {idx < navLinksLeft.length + navLinksRight.length - 1 && (
+                {idx < navLinks.length - 1 && (
                   <span className="text-[#9EA88B]/60 text-[8px] font-bold">•</span>
                 )}
               </React.Fragment>
@@ -83,7 +80,7 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-[#E8E0D3] text-[#1c241b] pt-24 px-6 pb-12 flex flex-col justify-between overflow-y-auto lg:hidden">
           <div className="space-y-6 text-center">
-            {[...navLinksLeft, ...navLinksRight].map((link) => (
+            {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}

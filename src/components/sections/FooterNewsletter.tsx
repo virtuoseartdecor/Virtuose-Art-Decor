@@ -13,7 +13,7 @@ export const FooterNewsletter: React.FC = () => {
           <div className="lg:col-span-4 space-y-5">
             <div className="space-y-1">
               <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#9EA88B] font-bold block">
-                ATENDIMENTO & CONCIERGE
+                ATENDIMENTO
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#1c241b] tracking-wide">
                 Fale conosco
@@ -115,7 +115,7 @@ export const FooterNewsletter: React.FC = () => {
           <div className="lg:col-span-4 space-y-4">
             <div className="space-y-1">
               <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#9EA88B] font-bold block">
-                LOCALIZAÇÃO & ATELIÊ
+                LOCALIZAÇÃO
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-light text-[#1c241b] tracking-wide">
                 Nosso Endereço

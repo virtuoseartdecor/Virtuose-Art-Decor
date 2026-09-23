@@ -59,7 +59,8 @@ export const FeatureMosaicSection: React.FC = () => {
   }, { scope: sectionRef });
 
   return (
-    <section id="mosaic" ref={sectionRef} className="py-24 bg-[#f7f4ed] text-[#1c241b] border-b border-[#9ea88b]/20">
+    <section id="experiencias" ref={sectionRef} className="py-24 bg-[#f7f4ed] text-[#1c241b] border-b border-[#9ea88b]/20 relative">
+      <span id="mosaic" className="absolute -top-24 left-0" />
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">

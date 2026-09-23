@@ -3,61 +3,99 @@ import { Volume2, VolumeX } from 'lucide-react';
 
 export const AudioPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioCtxRef = useRef<AudioContext | null>(null);
-  const gainNodeRef = useRef<GainNode | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const fadeIntervalRef = useRef<number | null>(null);
+
+  const clearFadeInterval = () => {
+    if (fadeIntervalRef.current !== null) {
+      window.clearInterval(fadeIntervalRef.current);
+      fadeIntervalRef.current = null;
+    }
+  };
 
   const toggleAudio = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    clearFadeInterval();
+
     if (!isPlaying) {
-      try {
-        const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-        const ctx = new AudioCtx();
-        audioCtxRef.current = ctx;
+      audio.volume = 0;
+      const playPromise = audio.play();
 
-        const gainNode = ctx.createGain();
-        gainNode.gain.setValueAtTime(0.01, ctx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.08, ctx.currentTime + 2);
-        gainNode.connect(ctx.destination);
-        gainNodeRef.current = gainNode;
-
-        const freqs = [216, 324, 432, 540];
-        freqs.forEach((freq) => {
-          const osc = ctx.createOscillator();
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(freq, ctx.currentTime);
-          osc.connect(gainNode);
-          osc.start();
-        });
-
-        setIsPlaying(true);
-      } catch (e) {
-        console.warn('Audio context init prevented or unsupported:', e);
-        setIsPlaying(false);
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+            const targetVolume = 0.45;
+            const step = 0.03;
+            fadeIntervalRef.current = window.setInterval(() => {
+              if (!audioRef.current) {
+                clearFadeInterval();
+                return;
+              }
+              if (audioRef.current.volume + step >= targetVolume) {
+                audioRef.current.volume = targetVolume;
+                clearFadeInterval();
+              } else {
+                audioRef.current.volume = Math.min(targetVolume, audioRef.current.volume + step);
+              }
+            }, 60);
+          })
+          .catch((err) => {
+            console.warn('Playback prevented or file load issue:', err);
+            setIsPlaying(false);
+          });
       }
     } else {
-      if (gainNodeRef.current && audioCtxRef.current) {
-        const ctx = audioCtxRef.current;
-        gainNodeRef.current.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1);
-        setTimeout(() => {
-          ctx.close();
-          audioCtxRef.current = null;
+      const step = 0.04;
+      fadeIntervalRef.current = window.setInterval(() => {
+        if (!audioRef.current) {
+          clearFadeInterval();
+          return;
+        }
+        if (audioRef.current.volume - step <= 0.02) {
+          audioRef.current.volume = 0;
+          audioRef.current.pause();
           setIsPlaying(false);
-        }, 1000);
-      } else {
-        setIsPlaying(false);
-      }
+          clearFadeInterval();
+        } else {
+          audioRef.current.volume = Math.max(0, audioRef.current.volume - step);
+        }
+      }, 50);
     }
   };
 
   useEffect(() => {
     return () => {
-      if (audioCtxRef.current && audioCtxRef.current.state !== 'closed') {
-        audioCtxRef.current.close();
+      clearFadeInterval();
+      if (audioRef.current) {
+        audioRef.current.pause();
       }
     };
   }, []);
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
+      {/* Native HTML5 Audio Element with User-Provided Soundtrack */}
+      <audio
+        ref={audioRef}
+        loop
+        preload="metadata"
+        onEnded={() => setIsPlaying(false)}
+        onPause={() => {
+          if (fadeIntervalRef.current === null) {
+            setIsPlaying(false);
+          }
+        }}
+      >
+        <source src="./audio/background-music.mp3" type="audio/mpeg" />
+        <source src="/audio/background-music.mp3" type="audio/mpeg" />
+        <source src="./audio/kiravale-intense-background-music-598114.mp3.mpeg" type="audio/mpeg" />
+        <source src="/audio/kiravale-intense-background-music-598114.mp3.mpeg" type="audio/mpeg" />
+        Seu navegador não suporta reprodução de áudio HTML5.
+      </audio>
+
       <button
         onClick={toggleAudio}
         aria-label={isPlaying ? 'Pausar atmosfera sensorial' : 'Sinta a Vírtuose'}
@@ -73,7 +111,7 @@ export const AudioPlayer: React.FC = () => {
         </span>
 
         <span className="font-sans text-xs tracking-[0.2em] uppercase font-semibold hidden sm:inline-block text-[#1c241b]">
-          {isPlaying ? 'Sinta a Vírtuose' : 'Sinta a Vírtuose'}
+          Sinta a Vírtuose
         </span>
 
         {isPlaying && (

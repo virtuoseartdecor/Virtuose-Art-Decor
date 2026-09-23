@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
   }, [activeSense]);
 
   return (
-    <section ref={heroRef} className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#20291d]">
+    <section id="inicio" ref={heroRef} className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#20291d]">
       {/* Parallax Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <img

@@ -56,7 +56,8 @@ export const ValuePropsBar: React.FC = () => {
   }, { scope: sectionRef });
 
   return (
-    <section id="valores" ref={sectionRef} className="bg-[#f7f4ed] text-[#1c241b] py-18 border-t border-b border-[#9ea88b]/20">
+    <section id="diferenciais" ref={sectionRef} className="bg-[#f7f4ed] text-[#1c241b] py-18 border-t border-b border-[#9ea88b]/20 relative">
+      <span id="valores" className="absolute -top-24 left-0" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {props.map((prop, idx) => {
