@@ -28,8 +28,45 @@ export const BrandStorySection: React.FC = () => {
   }, { scope: sectionRef });
 
   return (
-    <section id="sobre" ref={sectionRef} className="py-24 bg-[#E8E0D3] text-[#1c241b] border-b border-[#1c241b]/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sobre" ref={sectionRef} className="py-24 bg-[#E8E0D3] text-[#1c241b] border-b border-[#1c241b]/10 relative overflow-hidden">
+      {/* Botanical Foliage Arabesques along the whole section */}
+      <div className="absolute -top-12 -left-16 w-[420px] sm:w-[580px] lg:w-[680px] opacity-[0.22] pointer-events-none select-none z-0 transform -rotate-12 scale-x-[-1]">
+        <img
+          src="/images/bg-folha-verde.webp"
+          alt=""
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="absolute -bottom-16 -right-20 w-[450px] sm:w-[620px] lg:w-[740px] opacity-[0.24] pointer-events-none select-none z-0 transform rotate-[168deg]">
+        <img
+          src="/images/bg-folha-verde.webp"
+          alt=""
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="absolute top-1/2 -left-24 -translate-y-1/2 w-[360px] sm:w-[500px] opacity-[0.14] pointer-events-none select-none z-0 transform rotate-[32deg]">
+        <img
+          src="/images/bg-folha-verde.webp"
+          alt=""
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="absolute -top-20 right-1/4 w-[380px] sm:w-[540px] opacity-[0.16] pointer-events-none select-none z-0 transform rotate-[195deg] scale-y-[-1]">
+        <img
+          src="/images/bg-folha-verde.webp"
+          alt=""
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           
           {/* Left Narrative Block (7 Columns) */}
@@ -42,7 +79,7 @@ export const BrandStorySection: React.FC = () => {
 
             <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#9EA88B] font-bold flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-[#9EA88B]" />
-              Sobre a Virtuose
+              Sobre a Vírtuose
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#1c241b] leading-[1.15]">
@@ -50,7 +87,7 @@ export const BrandStorySection: React.FC = () => {
             </h2>
 
             <p className="font-sans text-sm sm:text-base text-[#1c241b]/85 font-light leading-relaxed">
-              A Virtuose nasceu do desejo profundo de transformar o cotidiano em arte. Selecionamos minuciosamente cada detalhe para que você viva experiências únicas, com beleza, significado e alma.
+              A Vírtuose nasceu do desejo profundo de transformar o cotidiano em arte. Selecionamos minuciosamente cada detalhe para que você viva experiências únicas, com beleza, significado e alma.
             </p>
 
             <div className="pt-2">

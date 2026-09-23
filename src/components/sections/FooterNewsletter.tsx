@@ -81,7 +81,7 @@ export const FooterNewsletter: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#f7f4ed] hover:bg-[#9EA88B] hover:text-[#1c241b] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-sm border border-[#9EA88B]/30 text-[#1c241b]"
-                aria-label="Instagram da Virtuose"
+                aria-label="Instagram da Vírtuose"
                 title="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ export const FooterNewsletter: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#f7f4ed] hover:bg-[#9EA88B] hover:text-[#1c241b] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-sm border border-[#9EA88B]/30 text-[#1c241b]"
-                aria-label="Pinterest da Virtuose"
+                aria-label="Pinterest da Vírtuose"
                 title="Pinterest"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ export const FooterNewsletter: React.FC = () => {
               <button
                 onClick={() => navigator.clipboard?.writeText(window.location.href)}
                 className="w-9 h-9 rounded-full bg-[#f7f4ed] hover:bg-[#9EA88B] hover:text-[#1c241b] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-sm border border-[#9EA88B]/30 text-[#1c241b] cursor-pointer"
-                aria-label="Compartilhar Virtuose"
+                aria-label="Compartilhar Vírtuose"
                 title="Copiar Link"
               >
                 <Share2 className="w-4 h-4" />
@@ -163,7 +163,7 @@ export const FooterNewsletter: React.FC = () => {
             </span>
             <div className="relative rounded-sm overflow-hidden border-2 border-[#9EA88B]/40 shadow-md bg-[#f7f4ed] group aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[260px]">
               <iframe
-                title="Localização Virtuose Art Decor - Apipema Center Ondina Salvador"
+                title="Localização Vírtuose Art Decor - Apipema Center Ondina Salvador"
                 src="https://maps.google.com/maps?q=Rua+Professor+Sabino+Silva+836+Apipema+Center+Ondina+Salvador+BA&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
@@ -185,7 +185,7 @@ export const FooterNewsletter: React.FC = () => {
 
         {/* Bottom Credits & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-sans font-light text-[#1c241b]/70 gap-4">
-          <p>© 2026 Virtuose Art Decor • Boutique Sensorial. Todos os direitos reservados.</p>
+          <p>© 2026 Vírtuose Art Decor • Boutique Sensorial. Todos os direitos reservados.</p>
           <div className="flex items-center gap-6 tracking-wider">
             <a href="/#sobre" className="hover:text-[#1c241b] transition-colors">SOBRE</a>
             <a href="/colecoes" className="hover:text-[#1c241b] transition-colors">COLEÇÕES</a>

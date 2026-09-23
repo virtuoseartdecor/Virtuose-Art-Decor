@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
   ];
 
   const navLinksRight = [
-    { label: 'SOBRE A VIRTUOSE', href: '/#sobre' },
+    { label: 'SOBRE A VÍRTUOSE', href: '/#sobre' },
     { label: 'VALORES', href: '/#valores' },
     { label: 'FALE CONOSCO', href: '/#contato' },
   ];
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
             <a href="#" className="flex flex-col items-center group py-0.5">
               <img
                 src="/images/logo-virtuose.png"
-                alt="Virtuose - Boutique Sensorial"
+                alt="Vírtuose - Boutique Sensorial"
                 className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105 drop-shadow-xs"
                 loading="eager"
               />
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="text-center pt-8 border-t border-[#1c241b]/15">
-            <p className="font-serif italic text-[#1c241b] text-lg mb-2">Virtuose Boutique Sensorial</p>
+            <p className="font-serif italic text-[#1c241b] text-lg mb-2">Vírtuose Boutique Sensorial</p>
             <p className="font-sans text-xs text-[#1c241b]/70 tracking-wider">ATENDIMENTO EXCLUSIVO & ATELIÊ</p>
           </div>
         </div>

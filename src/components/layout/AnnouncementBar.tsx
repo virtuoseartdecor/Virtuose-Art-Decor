@@ -23,7 +23,7 @@ export const AnnouncementBar: React.FC = () => {
           <MessageCircle className="w-3 h-3 text-[#9EA88B]" />
           <span className="text-[#1c241b]/80">WHATSAPP:</span>
           <a
-            href="https://wa.me/5571996241487?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20Virtuose."
+            href="https://wa.me/5571996241487?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20V%C3%ADrtuose."
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[#1c241b] hover:text-[#9EA88B] transition-colors"

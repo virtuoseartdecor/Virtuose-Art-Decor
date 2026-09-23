@@ -82,7 +82,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-bg.webp"
-          alt="Ateliê atmosférico da Virtuose Boutique Sensorial com arranjos botânicos e luz aconchegante"
+          alt="Ateliê atmosférico da Vírtuose Boutique Sensorial com arranjos botânicos e luz aconchegante"
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
           loading="eager"
         />
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
               href="#mosaic"
               className="inline-flex items-center gap-3 bg-[#9EA88B] hover:bg-[#8e987b] text-[#1c241b] border border-[#1c241b]/20 px-7 py-3.5 text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-sans font-semibold transition-all duration-300 group shadow-2xl backdrop-blur-md hover:scale-105"
             >
-              <span>DESCOBRIR A VIRTUOSE</span>
+              <span>DESCOBRIR A VÍRTUOSE</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>

@@ -1,6 +1,6 @@
-# Virtuose Art Decor — Boutique Sensorial & Experiências
+# Vírtuose Art Decor — Boutique Sensorial & Experiências
 
-> Plataforma institucional e editorial para a **Virtuose Art Decor**, desenvolvida com estética *soft-pastel*, *color-blocking* refinado, micro-interações *ui-motion* e navegação fluida de alta performance.
+> Plataforma institucional e editorial para a **Vírtuose Art Decor**, desenvolvida com estética *soft-pastel*, *color-blocking* refinado, micro-interações *ui-motion* e navegação fluida de alta performance.
 
 ---
 

@@ -189,7 +189,7 @@ export const ColecoesPage: React.FC = () => {
 
                   <div className="pt-4 border-t border-[#9EA88B]/25">
                     <a
-                      href="https://wa.me/5571996241487?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20Virtuose."
+                      href="https://wa.me/5571996241487?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20V%C3%ADrtuose."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-xs font-sans tracking-[0.2em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/link"
@@ -206,7 +206,7 @@ export const ColecoesPage: React.FC = () => {
           {/* Bottom Banner */}
           <div className="mt-20 p-10 bg-[#E8E0D3] rounded-sm border border-[#9EA88B]/40 text-center space-y-4 shadow-lg">
             <span className="font-serif text-3xl font-light text-[#1c241b] italic block">
-              Virtuose Boutique Sensorial
+              Vírtuose Boutique Sensorial
             </span>
             <p className="font-sans text-xs sm:text-sm text-[#4f584a] max-w-xl mx-auto font-light">
               Deseja um projeto sensorial personalizado para a sua casa ou evento? Nosso ateliê oferece atendimento sob medida.
