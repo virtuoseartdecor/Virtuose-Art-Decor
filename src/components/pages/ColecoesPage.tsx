@@ -4,6 +4,7 @@ import { AnnouncementBar } from '../layout/AnnouncementBar';
 import { Navbar } from '../layout/Navbar';
 import { FooterNewsletter } from '../sections/FooterNewsletter';
 import { AudioPlayer } from '../common/AudioPlayer';
+import { WhatsAppButton } from '../common/WhatsAppButton';
 
 interface CollectionItem {
   id: string;
@@ -188,7 +189,7 @@ export const ColecoesPage: React.FC = () => {
 
                   <div className="pt-4 border-t border-[#9EA88B]/25">
                     <a
-                      href="https://wa.me/5511999999999?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20a%20cole%C3%A7%C3%A3o%20Virtuose"
+                      href="https://wa.me/5571996241487?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20Virtuose."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-xs font-sans tracking-[0.2em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/link"
@@ -224,8 +225,9 @@ export const ColecoesPage: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer & Audio Player */}
+      {/* Footer & Floating Controls */}
       <FooterNewsletter />
+      <WhatsAppButton />
       <AudioPlayer />
     </div>
   );

@@ -7,6 +7,7 @@ import { BrandStorySection } from './components/sections/BrandStorySection';
 import { ValuePropsBar } from './components/sections/ValuePropsBar';
 import { FooterNewsletter } from './components/sections/FooterNewsletter';
 import { AudioPlayer } from './components/common/AudioPlayer';
+import { WhatsAppButton } from './components/common/WhatsAppButton';
 import { ColecoesPage } from './components/pages/ColecoesPage';
 
 export function App() {
@@ -38,6 +39,9 @@ export function App() {
 
       {/* Footer & Newsletter */}
       <FooterNewsletter />
+
+      {/* Floating Concierge WhatsApp Button */}
+      <WhatsAppButton />
 
       {/* Floating Ambient Sound Audio Player */}
       <AudioPlayer />
