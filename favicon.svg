@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="virtuoseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C241B"/>
+      <stop offset="100%" stop-color="#2D3A27"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E0D3"/>
+      <stop offset="100%" stop-color="#9EA88B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Base in Velvet Forest -->
+  <circle cx="32" cy="32" r="30" fill="url(#virtuoseGrad)" stroke="#9EA88B" stroke-width="1.5" stroke-opacity="0.8"/>
+  
+  <!-- Subtle Inner Ring -->
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#9EA88B" stroke-width="0.75" stroke-dasharray="2 2" stroke-opacity="0.5"/>
+
+  <!-- Botanical Leaf Crest Accent -->
+  <path d="M32 9 C35 12 37 14 36 17 C34 16 33 14 32 9 Z" fill="#9EA88B" opacity="0.9"/>
+  <path d="M32 9 C29 12 27 14 28 17 C30 16 31 14 32 9 Z" fill="#9EA88B" opacity="0.9"/>
+
+  <!-- Serif Monogram 'V' -->
+  <text 
+    x="32" 
+    y="44" 
+    font-family="'Cormorant Garamond', 'Didot', 'Bodoni MT', 'Cinzel', serif" 
+    font-size="34" 
+    font-weight="400" 
+    font-style="italic" 
+    fill="url(#goldGrad)" 
+    text-anchor="middle"
+    letter-spacing="-1"
+  >V</text>
+
+  <!-- Small Bottom Floral Dot -->
+  <circle cx="32" cy="51" r="1.5" fill="#9EA88B"/>
+</svg>

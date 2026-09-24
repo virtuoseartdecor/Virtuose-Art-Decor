@@ -6,23 +6,39 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. Se a pasta dist existir na raiz da Hostinger (Deploy do repositório completo via Git)
+  # 2. Servir favicons, manifestos e metadados diretamente sem reescrita
+  RewriteRule ^(favicon\.(ico|svg|png)|favicon-.*\.png|apple-touch-icon.*\.png|android-chrome-.*\.png|site\.webmanifest|robots\.txt|sitemap\.xml)$ - [L]
+
+  # 3. Se a pasta dist existir na raiz da Hostinger (Deploy do repositório completo via Git)
   RewriteCond %{REQUEST_URI} !^/dist/
   RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f [OR]
   RewriteCond %{DOCUMENT_ROOT}/dist/$1 -d
   RewriteRule ^(.*)$ dist/$1 [L]
 
-  # Se a pasta dist existir, rotear requisições SPA para dist/index.html
+  # Se a pasta dist existir, rotear requisições SPA para dist/index.html (exceto arquivos estáticos)
   RewriteCond %{REQUEST_URI} !^/dist/
+  RewriteCond %{REQUEST_URI} !\.(ico|svg|png|jpg|jpeg|webp|mp3|mpeg|xml|txt|json|webmanifest)$ [NC]
   RewriteCond %{DOCUMENT_ROOT}/dist/index.html -f
   RewriteRule ^ dist/index.html [L]
 
-  # 3. Se os arquivos já estiverem na raiz ou executando dentro de dist/
+  # 4. Se os arquivos já estiverem na raiz ou executando dentro de dist/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(ico|svg|png|jpg|jpeg|webp|mp3|mpeg|xml|txt|json|webmanifest)$ [NC]
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Tipos MIME corretos para Favicons e Ativos
+<IfModule mod_mime.c>
+  AddType image/x-icon .ico
+  AddType image/svg+xml .svg
+  AddType image/png .png
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Fallback de Erro 404
+ErrorDocument 404 /404.html
 
 # Compressão Gzip / Deflate
 <IfModule mod_deflate.c>
