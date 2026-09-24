@@ -102,7 +102,7 @@ export const FeatureMosaicSection: React.FC = () => {
                 href="/colecoes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 text-xs font-sans tracking-[0.2em] hover:tracking-[0.24em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/btn"
+                className="inline-flex items-center gap-2.5 min-h-[44px] py-2 text-xs font-sans tracking-[0.2em] hover:tracking-[0.24em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/btn focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9EA88B] rounded-sm"
               >
                 <span>Ver todas as coleções</span>
                 <ArrowRight className="w-4 h-4 text-[#9EA88B] transition-transform duration-300 group-hover/btn:translate-x-1.5" />
@@ -120,9 +120,12 @@ export const FeatureMosaicSection: React.FC = () => {
               <div className="absolute inset-0 z-0 overflow-hidden">
                 <img
                   src={pillar.image}
-                  alt={pillar.title}
+                  alt={`${pillar.title} — Curadoria Vírtuose Art Decor`}
+                  width="600"
+                  height="800"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c241b] via-[#1c241b]/70 to-transparent" />
               </div>
@@ -138,7 +141,7 @@ export const FeatureMosaicSection: React.FC = () => {
                 <div className="pt-2">
                   <a
                     href="#sobre"
-                    className="inline-flex items-center gap-2 text-[10px] font-sans tracking-[0.24em] hover:tracking-[0.28em] uppercase font-semibold text-[#9EA88B] group-hover:text-[#ffffff] transition-all duration-300"
+                    className="inline-flex items-center gap-2 min-h-[44px] py-2 text-[10px] font-sans tracking-[0.24em] hover:tracking-[0.28em] uppercase font-semibold text-[#9EA88B] group-hover:text-[#ffffff] transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9EA88B] rounded-sm"
                   >
                     <span>{pillar.cta}</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5" />

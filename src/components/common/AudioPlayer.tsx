@@ -76,7 +76,7 @@ export const AudioPlayer: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-4 sm:right-6 z-50">
       {/* Native HTML5 Audio Element with User-Provided Soundtrack */}
       <audio
         ref={audioRef}
@@ -100,7 +100,7 @@ export const AudioPlayer: React.FC = () => {
         onClick={toggleAudio}
         aria-label={isPlaying ? 'Pausar atmosfera sensorial' : 'Sinta a Vírtuose'}
         title={isPlaying ? 'Pausar Atmosfera' : 'Sinta a Vírtuose'}
-        className="group relative flex items-center gap-3 bg-[#E8E0D3]/95 backdrop-blur-xl border border-[#9EA88B]/40 text-[#1c241b] px-4.5 py-3 rounded-full shadow-[0_15px_35px_rgba(28,36,27,0.12)] transition-all duration-500 hover:scale-105 hover:bg-[#E8E0D3] hover:border-[#9EA88B] cursor-pointer"
+        className="group relative flex items-center justify-center gap-3 bg-[#E8E0D3]/95 backdrop-blur-xl border border-[#9EA88B]/40 text-[#1c241b] p-3 sm:px-4.5 sm:py-3 min-w-[48px] min-h-[48px] rounded-full shadow-[0_15px_35px_rgba(28,36,27,0.12)] transition-all duration-500 hover:scale-105 hover:bg-[#E8E0D3] hover:border-[#9EA88B] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9EA88B]"
       >
         <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[#9EA88B]/20 text-[#1c241b] transition-transform duration-300 group-hover:scale-110">
           {isPlaying ? (

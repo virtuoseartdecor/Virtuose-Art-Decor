@@ -9,16 +9,24 @@ import { FooterNewsletter } from './components/sections/FooterNewsletter';
 import { AudioPlayer } from './components/common/AudioPlayer';
 import { WhatsAppButton } from './components/common/WhatsAppButton';
 import { ColecoesPage } from './components/pages/ColecoesPage';
+import { NotFoundPage } from './components/pages/NotFoundPage';
 
 export function App() {
   // Initialize Lenis smooth scroll synchronized with GSAP ScrollTrigger
   useLenis();
 
-  const isColecoesPage = typeof window !== 'undefined' && 
-    (window.location.pathname.includes('/colecoes') || window.location.hash === '#todas-colecoes');
+  const pathname = typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : '/';
+  const hash = typeof window !== 'undefined' ? window.location.hash : '';
+
+  const isColecoesPage = pathname.includes('/colecoes') || hash === '#todas-colecoes';
+  const isHomePage = pathname === '/' || pathname === '' || pathname.endsWith('/index.html') || pathname.endsWith('/') || hash.startsWith('#');
 
   if (isColecoesPage) {
     return <ColecoesPage />;
+  }
+
+  if (!isHomePage) {
+    return <NotFoundPage />;
   }
 
   return (

@@ -30,39 +30,51 @@ export const BrandStorySection: React.FC = () => {
   return (
     <section id="sobre" ref={sectionRef} className="py-24 bg-[#E8E0D3] text-[#1c241b] border-b border-[#1c241b]/10 relative overflow-hidden">
       {/* Botanical Foliage Arabesques along the whole section */}
-      <div className="absolute -top-12 -left-16 w-[420px] sm:w-[580px] lg:w-[680px] opacity-[0.22] pointer-events-none select-none z-0 transform -rotate-12 scale-x-[-1]">
+      <div aria-hidden="true" className="absolute -top-12 -left-16 w-[420px] sm:w-[580px] lg:w-[680px] opacity-[0.22] pointer-events-none select-none z-0 transform -rotate-12 scale-x-[-1]">
         <img
           src="/images/bg-folha-verde.webp"
           alt=""
+          width="680"
+          height="480"
           className="w-full h-auto object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
 
-      <div className="absolute -bottom-16 -right-20 w-[450px] sm:w-[620px] lg:w-[740px] opacity-[0.24] pointer-events-none select-none z-0 transform rotate-[168deg]">
+      <div aria-hidden="true" className="absolute -bottom-16 -right-20 w-[450px] sm:w-[620px] lg:w-[740px] opacity-[0.24] pointer-events-none select-none z-0 transform rotate-[168deg]">
         <img
           src="/images/bg-folha-verde.webp"
           alt=""
+          width="740"
+          height="520"
           className="w-full h-auto object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
 
-      <div className="absolute top-1/2 -left-24 -translate-y-1/2 w-[360px] sm:w-[500px] opacity-[0.14] pointer-events-none select-none z-0 transform rotate-[32deg]">
+      <div aria-hidden="true" className="absolute top-1/2 -left-24 -translate-y-1/2 w-[360px] sm:w-[500px] opacity-[0.14] pointer-events-none select-none z-0 transform rotate-[32deg]">
         <img
           src="/images/bg-folha-verde.webp"
           alt=""
+          width="500"
+          height="350"
           className="w-full h-auto object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
 
-      <div className="absolute -top-20 right-1/4 w-[380px] sm:w-[540px] opacity-[0.16] pointer-events-none select-none z-0 transform rotate-[195deg] scale-y-[-1]">
+      <div aria-hidden="true" className="absolute -top-20 right-1/4 w-[380px] sm:w-[540px] opacity-[0.16] pointer-events-none select-none z-0 transform rotate-[195deg] scale-y-[-1]">
         <img
           src="/images/bg-folha-verde.webp"
           alt=""
+          width="540"
+          height="380"
           className="w-full h-auto object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -92,8 +104,8 @@ export const BrandStorySection: React.FC = () => {
 
             <div className="pt-2">
               <a
-                href="#manifesto"
-                className="inline-flex items-center gap-3 font-sans text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-semibold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group"
+                href="#diferenciais"
+                className="inline-flex items-center gap-3 min-h-[44px] py-2 font-sans text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-semibold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9EA88B] rounded-sm"
               >
                 <span>CONHEÇA NOSSA HISTÓRIA</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5 text-[#9EA88B]" />
@@ -122,8 +134,8 @@ export const BrandStorySection: React.FC = () => {
 
               <div className="pt-2">
                 <a
-                  href="#mosaic"
-                  className="inline-flex items-center gap-2 font-sans text-[10px] tracking-[0.22em] hover:tracking-[0.26em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] border-b border-[#9EA88B]/40 pb-1 group-hover:border-[#9EA88B] transition-all duration-300"
+                  href="#experiencias"
+                  className="inline-flex items-center gap-2 min-h-[44px] py-2 font-sans text-[10px] tracking-[0.22em] hover:tracking-[0.26em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] border-b border-[#9EA88B]/40 pb-1 group-hover:border-[#9EA88B] transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9EA88B]"
                 >
                   <span>CONHECER EXPERIÊNCIAS</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5 text-[#9EA88B]" />

@@ -133,7 +133,7 @@ export const ColecoesPage: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveCategory(tab.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-sans tracking-[0.16em] uppercase font-semibold transition-all duration-300 cursor-pointer ${
+                  className={`min-h-[44px] flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-sans tracking-[0.16em] uppercase font-semibold transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9EA88B] ${
                     activeCategory === tab.id
                       ? 'bg-[#9EA88B] text-[#1c241b] shadow-sm'
                       : 'bg-[#E8E0D3]/70 text-[#1c241b]/80 hover:bg-[#E8E0D3] border border-[#9EA88B]/30'
@@ -156,9 +156,12 @@ export const ColecoesPage: React.FC = () => {
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#1c241b]">
                   <img
                     src={col.image}
-                    alt={col.title}
+                    alt={`${col.title} — Vírtuose Art Decor`}
+                    width="600"
+                    height="450"
                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-108"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1c241b]/70 via-transparent to-transparent" />
                   
@@ -189,10 +192,10 @@ export const ColecoesPage: React.FC = () => {
 
                   <div className="pt-4 border-t border-[#9EA88B]/25">
                     <a
-                      href="https://wa.me/5571996241487?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20detalhes%20sobre%20as%20cole%C3%A7%C3%B5es%20da%20V%C3%ADrtuose."
+                      href={`https://wa.me/5571996241487?text=Ol%C3%A1!%20Gostaria%20de%20mais%20detalhes%20sobre%20a%20cole%C3%A7%C3%A3o%20${encodeURIComponent(col.title)}%20da%20V%C3%ADrtuose%20Art%20Decor.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-sans tracking-[0.2em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/link"
+                      className="inline-flex items-center gap-2 min-h-[44px] py-2 text-xs font-sans tracking-[0.2em] uppercase font-bold text-[#1c241b] hover:text-[#9EA88B] transition-all duration-300 group/link focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#9EA88B] rounded-xs"
                     >
                       <span>Consultar Curadoria</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#9EA88B] transition-transform duration-300 group-hover/link:translate-x-1.5" />
@@ -206,7 +209,7 @@ export const ColecoesPage: React.FC = () => {
           {/* Bottom Banner */}
           <div className="mt-20 p-10 bg-[#E8E0D3] rounded-sm border border-[#9EA88B]/40 text-center space-y-4 shadow-lg">
             <span className="font-serif text-3xl font-light text-[#1c241b] italic block">
-              Vírtuose Boutique Sensorial
+              Vírtuose Art Decor
             </span>
             <p className="font-sans text-xs sm:text-sm text-[#4f584a] max-w-xl mx-auto font-light">
               Deseja um projeto sensorial personalizado para a sua casa ou evento? Nosso ateliê oferece atendimento sob medida.
@@ -214,7 +217,7 @@ export const ColecoesPage: React.FC = () => {
             <div className="pt-2">
               <a
                 href="/"
-                className="inline-flex items-center gap-3 bg-[#9EA88B] hover:bg-[#8e987b] text-[#1c241b] border border-[#1c241b]/20 px-7 py-3 text-xs tracking-[0.22em] uppercase font-sans font-semibold transition-all duration-300 shadow-md hover:scale-105"
+                className="inline-flex items-center justify-center gap-3 bg-[#9EA88B] hover:bg-[#8e987b] text-[#1c241b] border border-[#1c241b]/20 px-7 py-3.5 min-h-[48px] text-xs tracking-[0.22em] uppercase font-sans font-semibold transition-all duration-300 shadow-md hover:scale-105 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c241b]"
               >
                 <span>Retornar ao Início</span>
                 <ArrowRight className="w-4 h-4 text-[#1c241b]" />

@@ -82,9 +82,13 @@ export const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-bg.webp"
-          alt="Ateliê atmosférico da Vírtuose Boutique Sensorial com arranjos botânicos e luz aconchegante"
+          alt="Ateliê atmosférico da Vírtuose Art Decor com arranjos botânicos, aromas e luz aconchegante"
+          width="1920"
+          height="1080"
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
           loading="eager"
+          decoding="sync"
+          fetchPriority="high"
         />
         {/* Soft Organic Vignette & Gradient Protection */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1c241b]/85 via-[#1c241b]/60 to-transparent" />
@@ -99,7 +103,7 @@ export const HeroSection: React.FC = () => {
             Boutique Sensorial & Ateliê
           </p>
 
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.15] font-light tracking-wide drop-shadow-md">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.15] font-light tracking-wide drop-shadow-md">
             Beleza que toca a alma
           </h1>
 
@@ -109,8 +113,8 @@ export const HeroSection: React.FC = () => {
 
           <div className="pt-2">
             <a
-              href="#mosaic"
-              className="inline-flex items-center gap-3 bg-[#9EA88B] hover:bg-[#8e987b] text-[#1c241b] border border-[#1c241b]/20 px-7 py-3.5 text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-sans font-semibold transition-all duration-300 group shadow-2xl backdrop-blur-md hover:scale-105"
+              href="#experiencias"
+              className="inline-flex items-center justify-center gap-3 bg-[#9EA88B] hover:bg-[#8e987b] text-[#1c241b] border border-[#1c241b]/20 px-7 py-3.5 min-h-[48px] text-xs tracking-[0.24em] hover:tracking-[0.28em] uppercase font-sans font-semibold transition-all duration-300 group shadow-2xl backdrop-blur-md hover:scale-105 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8E0D3]"
             >
               <span>DESCOBRIR A VÍRTUOSE</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
